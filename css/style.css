@@ -310,6 +310,7 @@ a {
 body {
     font-family: 'Pretendard';
     position: relative;
+    min-width: 1920px;
 }
 
 /* header */
