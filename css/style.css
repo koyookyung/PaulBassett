@@ -429,7 +429,7 @@ body {
 /* main_visual */
 .main_visual {
     width: 100%;
-    height: 953px;
+    height: 100vh;
     position: relative;
 }
 .main_visual .slide {
