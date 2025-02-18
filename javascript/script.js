@@ -1,11 +1,37 @@
 jQuery(document).ready(function () {
 
-    //2차메뉴
+
+    //2차메뉴 슬라이드
+    let header = $('.header');
+    let headerBg = $('.header .bg');
+
+    $('.gnb').mouseenter(function(){
+        $(header).css({
+            'background-color' : '#fff',
+            'color' : '#000',
+        });
+        $(headerBg).css({
+            'background-color' : '#fff',
+            'border-top' : '1px solid #000'
+        });
+    });//gnb.mouseenter()
+
+    $('.gnb').mouseleave(function(){
+        $(header).css({
+            'background-color' : 'rgba(0, 0, 0, 0.3)',
+            'color' : '#fff',
+            'border-bottom' : 'none'
+        });
+        $(headerBg).css({
+            'background-color' : 'rgba(0, 0, 0, 0.3)',
+        })
+    });//gnb.mouseleave()
+
     $('.gnb>li').mouseover(function () {
         $('.depth-02').stop().slideDown(500);
-        $('.gnb .bg').stop().slideDown(500);
+        $('.gnb .bg').stop().slideDown(300);
     }).mouseout(function () {
-        $('.depth-02').stop().slideUp(500);
+        $('.depth-02').stop().slideUp(300);
         $('.gnb .bg').stop().slideUp(500);
     });
 
